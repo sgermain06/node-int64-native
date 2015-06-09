@@ -1,7 +1,7 @@
 # int64-native
 
 `int64-native` is a simple `uint64_t` wrapper for JavaScript, enabling the
-use of 64-bit unsigned integers from node.
+use of 64-bit unsigned integers from node. **This version was modified to work with NodeJS v0.12.**
 
 ## Why?
 
