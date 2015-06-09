@@ -1,11 +1,11 @@
-# int64-native
+# int64-native-node12
 
-`int64-native` is a simple `uint64_t` wrapper for JavaScript, enabling the
-use of 64-bit unsigned integers from node.
+`int64-native-node12` is a simple `uint64_t` wrapper for JavaScript, enabling the
+use of 64-bit unsigned integers from node. **This version was modified to work with NodeJS v0.12+**
 
 ## Why?
 
-`int64-native` was originally developed to support reasonable handling of
+`int64-native-node12` was originally developed to support reasonable handling of
 64-bit ID columns in databases. There are other 64-bit integer modules out
 there, but AFAICT all of them are pure JavaScript; native `uint64_t` seemed
 like a better way to handle this!
@@ -18,15 +18,15 @@ client.
 
 ### via npm
 
-    npm install int64-native
+    npm install int64-native-node12
 
 ### from source
 
-    git clone git://github.com/candu/node-int64-native.git
-    cd node-int64-native
+    git clone git://github.com/candu/node-int64-native-node12.git
+    cd node-int64-native-node12
     npm install
 
-`int64-native` is built using `node-gyp`.
+`int64-native-node12` is built using `node-gyp`.
 
 ## Usage
 

@@ -3,13 +3,14 @@
 
 #include <node.h>
 #include <v8.h>
+#include <node_object_wrap.h>
 
 using namespace node;
 using namespace v8;
 
 class Int64 : public ObjectWrap {
  public:
-  static void Init(Handle<Object> exports);
+  static void Init(Handle<v8::Object> exports);
 
  private:
   Int64();
@@ -19,23 +20,23 @@ class Int64 : public ObjectWrap {
   ~Int64();
 
   static Persistent<Function> constructor;
-  static Handle<Value> New(const Arguments& args);
-  static Handle<Value> ToNumber(const Arguments& args);
-  static Handle<Value> ValueOf(const Arguments& args);
-  static Handle<Value> ToString(const Arguments& args);
-  static Handle<Value> ToUnsignedDecimalString(const Arguments& args);
-  static Handle<Value> ToSignedDecimalString(const Arguments& args);
-  static Handle<Value> Equals(const Arguments& args);
-  static Handle<Value> Compare(const Arguments& args);
-  static Handle<Value> High32(const Arguments& args);
-  static Handle<Value> Low32(const Arguments& args);
-  static Handle<Value> ShiftLeft(const Arguments& args);
-  static Handle<Value> ShiftRight(const Arguments& args);
-  static Handle<Value> And(const Arguments& args);
-  static Handle<Value> Or(const Arguments& args);
-  static Handle<Value> Xor(const Arguments& args);
-  static Handle<Value> Add(const Arguments& args);
-  static Handle<Value> Sub(const Arguments& args);
+  static void New(const v8::FunctionCallbackInfo<Value>& args);
+  static void ToNumber(const v8::FunctionCallbackInfo<Value>& args);
+  static void ValueOf(const v8::FunctionCallbackInfo<Value>& args);
+  static void ToString(const v8::FunctionCallbackInfo<Value>& args);
+  static void ToUnsignedDecimalString(const v8::FunctionCallbackInfo<Value>& args);
+  static void ToSignedDecimalString(const v8::FunctionCallbackInfo<Value>& args);
+  static void Equals(const v8::FunctionCallbackInfo<Value>& args);
+  static void Compare(const v8::FunctionCallbackInfo<Value>& args);
+  static void High32(const v8::FunctionCallbackInfo<Value>& args);
+  static void Low32(const v8::FunctionCallbackInfo<Value>& args);
+  static void ShiftLeft(const v8::FunctionCallbackInfo<Value>& args);
+  static void ShiftRight(const v8::FunctionCallbackInfo<Value>& args);
+  static void And(const v8::FunctionCallbackInfo<Value>& args);
+  static void Or(const v8::FunctionCallbackInfo<Value>& args);
+  static void Xor(const v8::FunctionCallbackInfo<Value>& args);
+  static void Add(const v8::FunctionCallbackInfo<Value>& args);
+  static void Sub(const v8::FunctionCallbackInfo<Value>& args);
 
   uint64_t mValue;
 };
